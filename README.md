@@ -31,3 +31,9 @@ Copy code
 ## Getting Started
 - See [README_BACKEND.md](./backend/README.md) for backend setup.
 - See [README_FRONTEND.md](./frontend/README.md) for frontend setup.
+
+## Default Admin Credentials
+Use the following credentials to log in as an **Admin** after setup:
+
+- **Username:** `admin`  
+- **Password:** `admin123`  
