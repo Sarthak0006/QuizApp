@@ -13,14 +13,14 @@ export default function AdminSkills() {
   const pageSize = 10;
   const [rows, setRows] = useState<Skill[]>([]);
   const [total, setTotal] = useState(0);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   async function load() {
-    setLoading(true);
+    // setLoading(true);
     try {
       const res = await api.get(`/api/skills?q=${encodeURIComponent(q)}&page=${page}&pageSize=${pageSize}`);
       setRows(res.data.items || []); setTotal(res.data.total || 0);
-    } finally { setLoading(false); }
+    } finally { /* setLoading(false); */ }
   }
 
   useEffect(()=>{ load(); }, [q, page]);

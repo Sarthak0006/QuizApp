@@ -6,7 +6,6 @@ import { Button } from "../components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "../components/ui/card";
 import { Input } from "../components/ui/input";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "../components/ui/select";
-import { Textarea } from "../components/ui/textarea";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
 import { Progress } from "../components/ui/progress";
 import { Badge } from "../components/ui/badge";
@@ -674,7 +673,7 @@ function AdminOverview() {
         });
     }, [attempts, range]);
 
-    const totalAttempts = filtered.length;
+    // const totalAttempts = filtered.length;
     const avgPercent = filtered.length
         ? Math.round((filtered.reduce((acc, a) => acc + (a.score / a.total) * 100, 0) / filtered.length))
         : 0;

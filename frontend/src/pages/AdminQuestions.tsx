@@ -13,10 +13,10 @@ export default function AdminQuestions() {
     const [skills, setSkills] = useState<Skill[]>([]);
     const [skillId, setSkillId] = useState<number | null>(null);
     const [items, setItems] = useState<Question[]>([]);
-    const [loading, setLoading] = useState(false);
+    // const [ setLoading] = useState(false);
 
     async function load() {
-        setLoading(true);
+        // setLoading(true);
         try {
             const s = await api.get("/api/skills?page=1&pageSize=100");
             setSkills(s.data.items || []);
@@ -25,7 +25,7 @@ export default function AdminQuestions() {
                 setItems(q.data.items || []);
             }
         } finally {
-            setLoading(false);
+            // setLoading(false);
         }
     }
 
