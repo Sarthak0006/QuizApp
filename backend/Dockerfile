@@ -17,5 +17,5 @@ RUN npm run build
 # Expose backend port
 EXPOSE 4000
 
-# Run the backend (adjust entrypoint if needed)
-CMD ["node", "dist/server.js"]
+# Run the backend
+CMD ["node", "dist/src/server.js"]
