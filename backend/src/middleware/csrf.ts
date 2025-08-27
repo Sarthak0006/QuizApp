@@ -12,7 +12,7 @@ export function attachCsrfToken(req: Request, res: Response, next: NextFunction)
         res.cookie("XSRF-TOKEN", token, {
             httpOnly: false, // must be readable by frontend JS to send header
             secure: isProd,
-            sameSite: "strict",
+            sameSite: "none",
             domain: COOKIE_DOMAIN,
             path: "/",
             maxAge: 60 * 60 * 1000
